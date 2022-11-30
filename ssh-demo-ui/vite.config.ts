@@ -14,11 +14,11 @@ export default defineConfig({
 
     server: {
         port: 3000,       // 设置服务启动的端口号；如果端口已经被使用，Vite 会自动尝试下一个可用的端口
-        open: true,       // 服务启动后自动打开浏览器
+        open: false,       // 服务启动后自动打开浏览器
         host:'0.0.0.0',
         proxy: {          // 代理
             '/api': {
-                target: 'https://localhost:8888',
+                target: 'http://localhost:8888',
                 // changeOrigin: true,
                 // rewrite: (path) => path.replace(/^\/api/, '')     // 注意代理地址的重写
             },
